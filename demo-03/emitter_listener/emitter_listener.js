@@ -4,7 +4,7 @@ function Account() {
 	events.EventEmitter.call(this);
 	this.deposit = function (amount) {
 		this.balance += amount;
-		this.emit('blanceChanged');
+		this.emit('balanceChanged');
 	};
 	this.withdraw = function (amount) {
 		this.balance -= amount;
@@ -32,7 +32,7 @@ account.on("balanceChanged", function () {
 	checkGoal(this, 1000);
 });
 account.deposit(220);
-// account.deposit(320);
-// account.deposit(600);
-// account.withdraw(1200);
+account.deposit(320);
+account.deposit(600);
+account.withdraw(1200);
 
